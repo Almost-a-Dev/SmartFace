@@ -1,12 +1,21 @@
 import React from 'react';
 import './SmartFace.css';
 
-const SmartFace = ({input}) => {
+const SmartFace = ({imageLink, faceSqr}) => {
     return (
       <div className='center ma'>
-        <div className='absolute mt2'>
-          <img id='inputimage' alt='' width='500px' heigh='auto'/>
-          <div className='facebox'><h1>{input}</h1></div>
+        <div className='absolute mt5 mb5'>
+          <img id='imageTag' alt=''src={imageLink} width='500px' height='auto'/>
+          <div 
+            className='facebox'
+            style=
+            {{
+              top: faceSqr.topRow, 
+              bottom: faceSqr.bottomRow, 
+              left: faceSqr.leftColumn, 
+              right: faceSqr.rightColumn
+            }}>
+          </div>
         </div>
       </div>
     );

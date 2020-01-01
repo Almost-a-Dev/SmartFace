@@ -6,7 +6,7 @@ const ImageForm = ({ catchInput, submitImage }) => {
     <div>
       <p className='f3'>
       </p>
-      <div className='center'>
+      <div className='center ma'>
         <div className='form center pa4 br3 shadow-5'>
           <input className='f4 pa2 w-70 center' type='tex' onChange={catchInput}/>
           <button
