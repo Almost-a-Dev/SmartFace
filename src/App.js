@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Register from './components/Register/Register';
 import Signin from './components/Signin/Signin';
 import SmartFace from './components/SmartFace/SmartFace';
-import ImageForm from './components/ImageForm/ImageForm';
+//import ImageForm from './components/ImageForm/ImageForm';
 import './App.css';
 
 import Clarifai from 'clarifai';
@@ -76,13 +76,12 @@ class App extends Component {
       <Navbar isSigned={isSigned} urlChange={this.urlChange}/>
       { route === 'home'
         ? <div>
-          <ImageForm 
-            catchInput={this.catchInput}
-            submitImage={this.submitImage}
-          />
+          
           <SmartFace 
             imageLink={imageLink}
             faceSqr={faceSqr}
+            catchInput={this.catchInput}
+            submitImage={this.submitImage}
             />
         </div> 
         : (
