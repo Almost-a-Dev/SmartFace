@@ -30,6 +30,13 @@ class App extends Component {
     this.state = initState;
   }
 
+  //just to test when the app is rendered fetch all users on the 'database' in the backend...
+  componentDidMount() {
+    fetch('http://localhost:3001/')
+      .then(resp => resp.json())
+      .then(console.log);
+  }
+
   //Harcoded routing react, will be changed later, just for test...
   urlChange = (route) => {
     if (route === 'signout') {
@@ -85,10 +92,10 @@ class App extends Component {
             />
         </div> 
         : (
-          route === 'signin'
+            route === 'signin'
             ? <Signin urlChange={this.urlChange}/>
             : <Register urlChange={this.urlChange}/>
-        )
+          )
       }
     </div>
     );
